@@ -5,8 +5,11 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Wpf_First_Look.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
+             d:DesignHeight="450" 
+             d:DesignWidth="800"
+             Background="Transparent"
+             >
+    <Grid Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="30"></RowDefinition>
             <RowDefinition Height="10"></RowDefinition>
@@ -14,7 +17,7 @@
             <RowDefinition Height="10"></RowDefinition>
             <RowDefinition Height="30"></RowDefinition>
         </Grid.RowDefinitions>
-        
+
         <Grid Grid.Row="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
@@ -30,6 +33,9 @@
             </StackPanel>
         </Grid>
 
+
+
+
         <Grid Grid.Row="4">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
@@ -41,11 +47,11 @@
             </StackPanel>
 
             <StackPanel Grid.Column="1" Orientation="Vertical"  VerticalAlignment="Center" HorizontalAlignment="Right">
-                <Button Style="{DynamicResource PrimaryButtonOne}">Add new</Button>
+                <Button Style="{DynamicResource PrimaryButtonOne}" Width="100">Add new</Button>
             </StackPanel>
         </Grid>
 
-        <DataGrid BorderThickness="0" Grid.Row="2" x:Name="DataGrid" IsReadOnly="True">
+        <DataGrid BorderThickness="0" Grid.Row="2" x:Name="DataGrid" IsReadOnly="True" Margin="10" Visibility="Hidden">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Column 1" Width="*" MinWidth="150"></DataGridTextColumn>
                 <DataGridTextColumn Header="Column 1" Width="*" MinWidth="150"></DataGridTextColumn>

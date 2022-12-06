@@ -33,6 +33,13 @@
                     <ColumnDefinition Width="*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
 
+                <!--Sidebar shadow-->
+                <Border Grid.Column="0" Background="Black" Margin="40 0">
+                    <Border.Effect>
+                        <DropShadowEffect Color="Black" ShadowDepth="30" BlurRadius="50" Opacity="0.8" Direction="360"/>
+                    </Border.Effect>
+                </Border>
+                
                 <!--Side bar-->
                 <Border Grid.Column="0" Background="#0c77bd" BorderBrush="Black" BorderThickness="0,0,0.2,0">
                     <Grid>
@@ -47,8 +54,10 @@
                             FaceAzure
                             </TextBlock>
                         </StackPanel>
+
+
                         <Grid Grid.Row="2">
-                            <DockPanel LastChildFill="False" >
+                            <DockPanel LastChildFill="False">
                                 <StackPanel DockPanel.Dock="Top" Height="10">
 
                                 </StackPanel>
