@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using Wpf_First_Look.Core.Models.Entities;
 
 namespace Wpf_First_Look.ViewModels
@@ -17,6 +18,12 @@ namespace Wpf_First_Look.ViewModels
         private string message = "Default value";
         private BindableCollection<Profile> users = new();
         private Profile selectedUser = new();
+
+
+        //Page
+        private object dahsboardPage = new DashboardViewModel();
+        private object customerPage = new CustomerViewModel();
+
 
         /// <summary>
         /// Properties
@@ -98,7 +105,17 @@ namespace Wpf_First_Look.ViewModels
                 },
             };
 
-            this.ActiveItem = new LoginViewModel();
+            this.ActiveItem = customerPage;
+        }
+
+        public void showDashboardPage()
+        {
+            this.ActiveItem = dahsboardPage;
+        }
+
+        public void showCustomerPage()
+        {
+            this.ActiveItem = customerPage;
         }
     }
 }

@@ -9,18 +9,77 @@
       Title="ShellView">
 
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="10"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="10"/>
-        </Grid.RowDefinitions>
+        <Grid>
 
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="10" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="10" />
-        </Grid.ColumnDefinitions>
-        
-        <ContentControl x:Name="ActiveItem"  Grid.Column="1" Grid.Row="1" Background="Aqua"/>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <!--Context menu-->
+            <!--<Border BorderThickness="0,0,0,0.2" BorderBrush="Black" Grid.Column="0" Grid.Row="0" FlowDirection="LeftToRight">
+                <DockPanel LastChildFill="False">
+                    <Button Padding="10,0" Width="Auto" BorderThickness="0" Background="Transparent">File</Button>
+                    <Button Padding="10,0" Width="Auto" BorderThickness="0" Background="Transparent">Lists</Button>
+                    <Button Padding="10,0" Width="Auto" BorderThickness="0" Background="Transparent">Reports</Button>
+                    <Button Padding="10,0" Width="Auto" BorderThickness="0" Background="Transparent">About</Button>
+                    <Button Padding="10,0" Width="Auto" BorderThickness="0" Background="Transparent">Help</Button>
+                </DockPanel>
+            </Border>-->
+
+            <Grid Grid.Column="0" Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="250"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <!--Side bar-->
+                <Border Grid.Column="0" Background="#0c77bd" BorderBrush="Black" BorderThickness="0,0,0.2,0">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="10"></RowDefinition>
+                            <RowDefinition Height="40"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="10"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <StackPanel Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center">
+                            <TextBlock VerticalAlignment="Center" FontFamily="Roboto" FontSize="24" Margin="20,0" Foreground="White">
+                            FaceAzure
+                            </TextBlock>
+                        </StackPanel>
+                        <Grid Grid.Row="2">
+                            <DockPanel LastChildFill="False" >
+                                <StackPanel DockPanel.Dock="Top" Height="10">
+
+                                </StackPanel>
+                                <Button x:Name="showDashboardPage" Style="{DynamicResource MenuButton}" DockPanel.Dock="Top">Dashboard</Button>
+                                <Button  Style="{DynamicResource MenuButton}" DockPanel.Dock="Top">Vendors</Button>
+                                <Button x:Name="showCustomerPage" Style="{DynamicResource MenuButton}" DockPanel.Dock="Top">Customers</Button>
+                                <Button Style="{DynamicResource MenuButton}" DockPanel.Dock="Top">Employees</Button>
+                                <Button Style="{DynamicResource MenuButton}" DockPanel.Dock="Top">Taxs</Button>
+                                <Button Style="{DynamicResource MenuButton}" DockPanel.Dock="Top">Reports</Button>
+                            </DockPanel>
+                        </Grid>
+                    </Grid>
+                </Border>
+
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="10"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="10" />
+                    </Grid.ColumnDefinitions>
+
+                    <ContentControl x:Name="ActiveItem"  Grid.Column="1" Grid.Row="1" Background="Aqua"/>
+                </Grid>
+            </Grid>
+        </Grid>
     </Grid>
+    <!---->
 </Page>

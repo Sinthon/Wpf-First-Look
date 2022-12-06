@@ -11,11 +11,11 @@ namespace Wpf_First_Look.ViewModels
 {
     public class MainViewModel : Conductor<object>
     {
-        private object LoginPage = new LoginViewModel();
+        private object statupPage = new ShellViewModel();
 
         public MainViewModel()
         {
-            this.ActiveItem = LoginPage;
+            this.ActiveItem = new ShellViewModel();
         }
     }
 }

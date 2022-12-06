@@ -9,8 +9,8 @@
         Title="MainView" 
         Height="450" Width="800"
         Loaded="OnLoad"
-        FontFamily="Roboto">
-    
+        FontFamily="Roboto"
+       >
     <!-- WindowStyle="None"-->
     <Grid>
         <!--Main content-->

@@ -18,12 +18,12 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="10"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="150"></RowDefinition>
+                <RowDefinition Height="155"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
                 <RowDefinition Height="10"></RowDefinition>
             </Grid.RowDefinitions>
 
-            <Label Grid.Column="1" Grid.Row="1" Foreground="Green" FontWeight="Bold" FontSize="26" HorizontalAlignment="Left">Login</Label>
+            <Label Grid.Column="1" Grid.Row="1" Foreground="{StaticResource Primary}" FontWeight="Bold" FontSize="26" HorizontalAlignment="Left">Login</Label>
             <Grid Grid.Column="1" Grid.Row="2">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="80"></ColumnDefinition>
@@ -51,9 +51,9 @@
                     Rember me
                 </CheckBox>
             </Grid>
-            <Border CornerRadius="1" Background="Green"  Grid.Column="1"  Grid.Row="3" Height="30">
-                <Label  x:Name="ButtonLogin" Foreground="White" BorderBrush="Transparent" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center">Login</Label>
-            </Border>
+            <Button  x:Name="LoginAsync" Grid.Column="1"  Grid.Row="3" FontSize="12" Style="{DynamicResource PrimaryButtonOne}" >
+                Login
+            </Button>
         </Grid>
     </StackPanel>
 </Page>
