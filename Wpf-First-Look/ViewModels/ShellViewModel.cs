@@ -97,16 +97,8 @@ namespace Wpf_First_Look.ViewModels
                     Photo = ""
                 },
             };
-        }
 
-        public void LoadPageOne()
-        {
-
-        }
-
-        public void LoadPageTwo()
-        {
-
+            this.ActiveItem = new LoginViewModel();
         }
     }
 }
